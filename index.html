@@ -1,5 +1,18 @@
 <html>
     <head>
+        <script>
+            fetch('https://www.mocky.io/v2/5185415ba171ea3a00704eed', {
+                method: 'PUT'
+            })
+            .then(res => res.json())
+            .then(json => {
+                setTimeout(() => {
+                    const node = document.querySelector('.moreappropriate');
+                    node.innerHTML = `hello ${json.hello}`;
+                }, 3000);
+            });
+        </script>
+
         <style>
             body {
                 font-family: Arial, Helvetica, sans-serif;
@@ -13,6 +26,6 @@
         </style>
     </head>
     <body>
-        <h1 class="moreappropriate">Hello World</h1>
+        <h1 class="moreappropriate">First Project</h1>
     </body>
 </html>
